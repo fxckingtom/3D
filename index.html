@@ -1,20 +1,82 @@
-hello MyFriend
-<hr/>
-<a href="sketchfab.html">SketchFab Example</a> <br/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer Hub</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #F3F4F6;
+            --text: #1F2937;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text);
+        }
+        .header p {
+            color: #6B7280;
+            margin-top: 10px;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .nav-card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-weight: 600;
+        }
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
 
-<p>
-<a href="0.babylonViewer Basic.html">Babylon Viewer Basic</a>
-</p>
+    <div class="header">
+        <h1>Hello MyFriend 👋</h1>
+        <p>Choose a viewer to explore the 3D models</p>
+    </div>
 
-<p>
-<a href="1.babylonViewer Select.html">Babylon Viewer Select</a>
-</p>
+    <div class="nav-grid">
+        <a href="sketchfab.html" class="nav-card">🎨 SketchFab Example</a>
+        <a href="0.babylonViewer Basic.html" class="nav-card">📦 Babylon Viewer Basic</a>
+        <a href="1.babylonViewer Select.html" class="nav-card">🖱️ Babylon Viewer Select</a>
+        <a href="2.babylonViewer Navbar.html" class="nav-card">⚙️ Babylon Viewer Navbar</a>
+    </div>
 
-<a href="2.babylonViewer Navbar.html">Babylon Viewer Navbar</a>
-<hr/>
-<!--
-<p>
-<a href="./webAR">WebAR 範例</a>
-</p>
--->
-
+</body>
+</html>
